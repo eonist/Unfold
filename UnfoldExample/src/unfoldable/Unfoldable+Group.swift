@@ -4,7 +4,7 @@ import Spatial
 /*Key*/
 extension Group:UnFoldable{
    enum Key{
-      static let group = "group"
+      static let group = 0//"group"
    }
 }
 /*Unfold UI component*/

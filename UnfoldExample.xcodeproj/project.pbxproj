@@ -132,8 +132,8 @@
 				F1BED5A721B3FD1F00A0D3D4 /* Unfold.swift */,
 				F1BED5A821B3FD1F00A0D3D4 /* util */,
 				F1BED5B021B3FD1F00A0D3D4 /* Unfoldable+Extensions.swift */,
-				F1BED5B121B3FD1F00A0D3D4 /* unfoldable */,
 				F1BED5B721B3FD1F00A0D3D4 /* UnFoldable.swift */,
+				F1BED5B121B3FD1F00A0D3D4 /* unfoldable */,
 			);
 			path = src;
 			sourceTree = "<group>";

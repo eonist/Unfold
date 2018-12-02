@@ -16,10 +16,10 @@ struct ElementConfig {/*Default Element config*/
    var size:CGSize
    let id:String?//TODO: ⚠️️ rename to tag
    init(_ dict:[String:Any]){
-      let width:CGFloat = UnfoldUtils.value(dict, "width")
-      let height:CGFloat = UnfoldUtils.value(dict, "height")
+      let width:CGFloat = UnfoldUtils.value(dict, key:"width")
+      let height:CGFloat = UnfoldUtils.value(dict, key:"height")
       size = CGSize(width:width,height:height)
-      id = UnfoldUtils.value(dict, "id")
+      id = UnfoldUtils.value(dict, key:"id")
    }
 }
 

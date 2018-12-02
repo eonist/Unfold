@@ -18,14 +18,14 @@ extension UnFoldable{
     * Retrives a value
     * NOTE: Can't use generics because subscript doesn't support generics other than in classes
     */
-   func retrieve<T>(_ path: [Int]) throws -> T{
-      return try UnfoldParser.value(self, path)
+   func retrieve<T>(_ path: [String]) throws -> T{
+      return try UnfoldParser.value(self, path:path)
    }
    /**
     * EXAMPLE: self.apply([PrefsType.login,TextInput.Key.inputText],prefs.login)
     */
-   func apply(_ path:[Int],_ value:Any){
-      UnfoldModifier.applyData(self, path, value)
+   func apply(_ path:[String], value:Any){
+      UnfoldModifier.applyData(self, path:path, value:value)
    }
    /**
     * New unfolds ui

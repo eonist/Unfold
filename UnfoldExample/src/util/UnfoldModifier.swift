@@ -9,9 +9,9 @@ class UnfoldModifier {
      * This method is recursive
      * IMPROVMENT: ⚠️️ Might need to change view to generic, because not all NSViews are unfoldable, think containers etc
      */
-    static func applyData(_ view:UnFoldable, _ path:[Int],_ value:Any)  {
+    static func applyData(_ view:UnFoldable, path:[String], value:Any)  {
         do {
-            let unfoldable:UnFoldable = try UnfoldParser.unfoldable(parent:view, path)/*, let last = path.last*/
+         let unfoldable:UnFoldable = try UnfoldParser.unfoldable(parent:view, path:path) /*, let last = path.last*/
 //            Swift.print("unfoldable: path: \(path) " + "\(unfoldable) id: \((unfoldable as! ElementKind).id)")
             unfoldable.value = value
         } catch {

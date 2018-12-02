@@ -12,18 +12,18 @@ public class Unfold{
     * Creates UI components and adds them to a parent
     * TODO: ⚠️️ In the future you will use a json method that can take an [Any] that contains str and int for the path. so you can do path:["app",0,"repoView"] etc
     */
-   public static func unFold(fileURL:String, path:String, parent:UIView){
+   public static func unFold(fileURL:String, path:Int, parent:UIView){
       //      Swift.print("Unfold.unFold")
       guard let fileContent:String = FileParser.content(fileURL) else {fatalError("no content at: \(fileURL)")}
       guard let json:Any = JSONParser.json(fileContent) else {fatalError("content is not json: \(fileURL)")}
       guard let jsonDict:[String: Any] = JSONParser.dict(json) else {fatalError("fileURL: is incorrect: \(fileURL)")}
-      unFold(jsonDict:jsonDict,path:path,parent:parent)
+      unFold(jsonDict:jsonDict, path:path, parent:parent)
    }
    /**
     * Unfold many UI Items
     */
-   public static func unFold(jsonDict:[String: Any], path:String, parent:UIView){
-      guard let jsonDictItem:Any = jsonDict[path] else{fatalError("path is incorrect: \(path)")}
+   public static func unFold(jsonDict:[String: Any], path:Int, parent:UIView){
+      guard let jsonDictItem:Any = jsonDict[String(path)] else{fatalError("path is incorrect: \(path)")}
       unFold(jsonDictItem:jsonDictItem, parent:parent)
    }
    /**

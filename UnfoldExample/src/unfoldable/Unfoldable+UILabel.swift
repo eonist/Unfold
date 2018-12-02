@@ -17,7 +17,7 @@ extension UnFoldable where Self:UILabel{
       let elementConfig:ElementConfig = .init(dict)
       let label = UILabel.init(frame: .zero)//(text: text, size: elementConfig.size, id: elementConfig.id)
       label.tag = 0//elementConfig.id
-      label.text = UnfoldUtils.value(dict, "label") ?? ""
+      label.text = UnfoldUtils.value(dict, key:Key.text/*"label"*/) ?? "" 
       label.activateSize{ view in
          return Constraint.size(view, size: elementConfig.size)
       }
