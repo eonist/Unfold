@@ -1,0 +1,9 @@
+{
+  "commitish" : "7499ab108d2b92d5c33e7fb4278379c34b4c8e1a",
+  "iOS" : [
+    {
+      "name" : "FileSugar",
+      "hash" : "07766ccecd0139ce0d8e18da4fe9aec03850ab9fb4f657b80cda38912e9725d1"
+    }
+  ]
+}

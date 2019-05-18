@@ -1,0 +1,9 @@
+{
+  "commitish" : "195c4d5831d2c4f61d899e7d2947764ab71c708c",
+  "iOS" : [
+    {
+      "name" : "JSONSugar",
+      "hash" : "6c2822e55bef02622ebed92e5e29bf8c63736c3ca0d8abc4cc743d0a10f6e7b1"
+    }
+  ]
+}
