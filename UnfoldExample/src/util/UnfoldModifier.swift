@@ -1,7 +1,7 @@
 import UIKit
 
 class UnfoldModifier {
-    enum UnfoldError:Error {
+    enum UnfoldError: Error {
         case PathDoesNotExist//"Can't find unfoldable for path: \(path)"
     }
     /**
@@ -9,9 +9,9 @@ class UnfoldModifier {
      * This method is recursive
      * IMPROVMENT: ⚠️️ Might need to change view to generic, because not all NSViews are unfoldable, think containers etc
      */
-    static func applyData(_ view:UnFoldable, path:[String], value:Any)  {
+    static func applyData(_ view: UnFoldable, path: [String], value: Any) {
         do {
-         let unfoldable:UnFoldable = try UnfoldParser.unfoldable(parent:view, path:path) /*, let last = path.last*/
+         let unfoldable: UnFoldable = try UnfoldParser.unfoldable(parent: view, path: path) /*, let last = path.last*/
 //            Swift.print("unfoldable: path: \(path) " + "\(unfoldable) id: \((unfoldable as! ElementKind).id)")
             unfoldable.value = value
         } catch {
@@ -21,7 +21,7 @@ class UnfoldModifier {
 }
 /**
  * Apply data to unfoldable items to all subviews in an Element
- * TODO:    ⚠️️  probably do .first instead
+ * Fixme:    ⚠️️  probably do .first instead
  */
 //    static func applyData(_ view:Element, _ data:[String:[String:Any]]){
 //        Swift.print("applyData")

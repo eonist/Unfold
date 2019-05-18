@@ -1,6 +1,6 @@
 import Foundation
 
-//TODO: ⚠️️ Use typed erorrs instead, remove this extension
+//Fixme: ⚠️️ Use typed erorrs instead, remove this extension
 
 extension String: Error {}/*Then you can just throw a string*/
 

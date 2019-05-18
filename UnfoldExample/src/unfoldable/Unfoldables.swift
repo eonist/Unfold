@@ -21,17 +21,17 @@ class Unfoldables {
      * EXAMPLE: let item = (Unfoldables.dict2["\(RadioButton.self)"])?([:])
      * EXAMPLE: Swift.print("item: " + "\(item)")//item: Optional(<Element.RadioButton: 0x101a13d00>)
      */
-    static let dict:[String:UnFoldable.UnFoldMethod] = {
-        return ["\(UITextView.self)":UITextView.unfold,
-                "\(UILabel.self)":UILabel.unfold,
-                "\(UIButton.self)":UIButton.unfold,
-                "\(Group.self)":Group.unfold
+    static let dict: [String: UnFoldable.UnFoldMethod] = {
+               [
+                "\(UITextView.self)": UITextView.unfold,
+                "\(UILabel.self)": UILabel.unfold,
+                "\(UIButton.self)": UIButton.unfold,
+                "\(Group.self)": Group.unfold
+               ]
 //                "\(CheckBoxButton2.self)":CheckBoxButton2.unfold,
 //                "\(TextButton.self)":TextButton.unfold,
 //                "\(FilePicker.self)":FilePicker.unfold,
 //                "\(Container.self)":Container.unfold,
 //                "\(Section.self)":Section.unfold
-                ]
     }()
 }
-

@@ -1,3 +1,3 @@
 import UIKit
 
-class Group:UIView {}
+class Group: UIView {}
